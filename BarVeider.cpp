@@ -1,18 +1,20 @@
+@2015 Xus72 
+
 #include <conio.h>
 #include <iostream>
-#include <windows.h>//para usar la función de espera Sleep
+#include <windows.h>//para usar la funciÃ³n de espera Sleep
 #include <locale.h>
 #include <string.h>
 using namespace std;
 
-/*Función que imprime una línea de 30 símbolos con caracater que se le pasa*/
+/*FunciÃ³n que imprime una lÃ­nea de 30 sÃ­mbolos con caracater que se le pasa*/
 void imprimeLinea(char simbolo){
      cout<<endl;
      for (int i=1; i<=30; i++)
          cout<<simbolo;
      cout<<endl;
      }
-/*Función que imprime el menú principal*/
+/*FunciÃ³n que imprime el menÃº principal*/
 void menuPrincipal(){
      system("cls");//permite borrar la pantalla
      cout<<"Bienvenido al BAR VEIDER,seleccione su perfil..."<<endl;
@@ -20,7 +22,7 @@ void menuPrincipal(){
      cout<<"G) Gerente"<<endl<<"C) Camarero"<<endl<<"S) Salir";
      imprimeLinea('*');
      }
-/*Función que imprime el menú Gerente*/
+/*FunciÃ³n que imprime el menÃº Gerente*/
 void menuGerente(){
      system("cls");//permite borrar la pantalla
      cout<<"Seleccione operacion..."<<endl;
@@ -31,7 +33,7 @@ void menuGerente(){
      imprimeLinea('-');
      }
 
-/*Función que imprime los camareros de la plantilla*/
+/*FunciÃ³n que imprime los camareros de la plantilla*/
 void mostrarCamareros(string camarero1,string camarero2,string camarero3,string clave1,string clave2,string clave3,int totalCamareros){
      system("cls");
      if(totalCamareros==0) cout<<"No tiene camareros registrados"<<endl;
@@ -40,20 +42,20 @@ void mostrarCamareros(string camarero1,string camarero2,string camarero3,string 
      if(totalCamareros==3) {cout<<"Nombre     Clave"<<endl<<camarero1<<"     "<<clave1<<endl<<camarero2<<"     "<<clave2<<endl<<camarero3<<"     "<<clave3<<endl;}
      }
 
-/*Función que imprime los productos que están registrados*/
+/*FunciÃ³n que imprime los productos que estÃ¡n registrados*/
 void mostrarProductos(string producto1,string producto2,string producto3,string producto4,string producto5,double precio1,double precio2,double precio3,double precio4,double precio5,string codigo1,string codigo2,string codigo3,string codigo4,string codigo5,int totalProductos){
      system("cls");
      imprimeLinea('*');
-     if(totalProductos==0) cout<<"No dispone de ningún producto"<<endl;
-     if(totalProductos==1) {cout<<"Dispone de los siguientes productos:"<<endl; cout<<"Código: "<<codigo1<<" "<<"Producto: "<<producto1<<" "<<"Precio: "<<precio1<<endl;}
-     if(totalProductos==2) {cout<<"Dispone de los siguientes productos:"<<endl; cout<<"Código: "<<codigo1<<" "<<"Producto: "<<producto1<<" "<<"Precio: "<<precio1<<endl;cout<<"Código: "<<codigo2<<" "<<"Producto: "<<producto2<<" "<<"Precio: "<<precio2<<endl;}
-     if(totalProductos==3) {cout<<"Dispone de los siguientes productos:"<<endl; cout<<"Código: "<<codigo1<<" "<<"Producto: "<<producto1<<" "<<"Precio: "<<precio1<<endl;cout<<"Código: "<<codigo2<<" "<<"Producto: "<<producto2<<" "<<"Precio: "<<precio2<<endl;cout<<"Código: "<<codigo3<<" "<<"Producto: "<<producto3<<" "<<"Precio: "<<precio3<<endl;}
-     if(totalProductos==4) {cout<<"Dispone de los siguientes productos:"<<endl; cout<<"Código: "<<codigo1<<" "<<"Producto: "<<producto1<<" "<<"Precio: "<<precio1<<endl;cout<<"Código: "<<codigo2<<" "<<"Producto: "<<producto2<<" "<<"Precio: "<<precio2<<endl;cout<<"Código: "<<codigo3<<" "<<"Producto: "<<producto3<<" "<<"Precio: "<<precio3<<endl;cout<<"Código: "<<codigo4<<" "<<"Producto: "<<producto4<<" "<<"Precio: "<<precio4<<endl;}
-     if(totalProductos==5) {cout<<"Dispone de los siguientes productos:"<<endl; cout<<"Código: "<<codigo1<<" "<<"Producto: "<<producto1<<" "<<"Precio: "<<precio1<<endl;cout<<"Código: "<<codigo2<<" "<<"Producto: "<<producto2<<" "<<"Precio: "<<precio2<<endl;cout<<"Código: "<<codigo3<<" "<<"Producto: "<<producto3<<" "<<"Precio: "<<precio3<<endl;cout<<"Código: "<<codigo4<<" "<<"Producto: "<<producto4<<" "<<"Precio: "<<precio4<<endl;cout<<"Código: "<<codigo5<<" "<<"Producto: "<<producto5<<" "<<"Precio: "<<precio5<<endl;}
+     if(totalProductos==0) cout<<"No dispone de ningÃºn producto"<<endl;
+     if(totalProductos==1) {cout<<"Dispone de los siguientes productos:"<<endl; cout<<"CÃ³digo: "<<codigo1<<" "<<"Producto: "<<producto1<<" "<<"Precio: "<<precio1<<endl;}
+     if(totalProductos==2) {cout<<"Dispone de los siguientes productos:"<<endl; cout<<"CÃ³digo: "<<codigo1<<" "<<"Producto: "<<producto1<<" "<<"Precio: "<<precio1<<endl;cout<<"CÃ³digo: "<<codigo2<<" "<<"Producto: "<<producto2<<" "<<"Precio: "<<precio2<<endl;}
+     if(totalProductos==3) {cout<<"Dispone de los siguientes productos:"<<endl; cout<<"CÃ³digo: "<<codigo1<<" "<<"Producto: "<<producto1<<" "<<"Precio: "<<precio1<<endl;cout<<"CÃ³digo: "<<codigo2<<" "<<"Producto: "<<producto2<<" "<<"Precio: "<<precio2<<endl;cout<<"CÃ³digo: "<<codigo3<<" "<<"Producto: "<<producto3<<" "<<"Precio: "<<precio3<<endl;}
+     if(totalProductos==4) {cout<<"Dispone de los siguientes productos:"<<endl; cout<<"CÃ³digo: "<<codigo1<<" "<<"Producto: "<<producto1<<" "<<"Precio: "<<precio1<<endl;cout<<"CÃ³digo: "<<codigo2<<" "<<"Producto: "<<producto2<<" "<<"Precio: "<<precio2<<endl;cout<<"CÃ³digo: "<<codigo3<<" "<<"Producto: "<<producto3<<" "<<"Precio: "<<precio3<<endl;cout<<"CÃ³digo: "<<codigo4<<" "<<"Producto: "<<producto4<<" "<<"Precio: "<<precio4<<endl;}
+     if(totalProductos==5) {cout<<"Dispone de los siguientes productos:"<<endl; cout<<"CÃ³digo: "<<codigo1<<" "<<"Producto: "<<producto1<<" "<<"Precio: "<<precio1<<endl;cout<<"CÃ³digo: "<<codigo2<<" "<<"Producto: "<<producto2<<" "<<"Precio: "<<precio2<<endl;cout<<"CÃ³digo: "<<codigo3<<" "<<"Producto: "<<producto3<<" "<<"Precio: "<<precio3<<endl;cout<<"CÃ³digo: "<<codigo4<<" "<<"Producto: "<<producto4<<" "<<"Precio: "<<precio4<<endl;cout<<"CÃ³digo: "<<codigo5<<" "<<"Producto: "<<producto5<<" "<<"Precio: "<<precio5<<endl;}
      imprimeLinea('*');
 }
 
-/*Función que imprime el menú para eliminar camareros*/
+/*FunciÃ³n que imprime el menÃº para eliminar camareros*/
 void eliminarCamareros(string &camarero1,string &camarero2,string &camarero3,string &camareroAux,int &totalCamareros,string &clave1,string &clave2,string &clave3){
      system("cls");
      if(totalCamareros==0) cout<<"No hay camareros registrados";
@@ -75,13 +77,13 @@ void eliminarCamareros(string &camarero1,string &camarero2,string &camarero3,str
      Sleep(3000);
      }
 
-/*Función que imprime el menú para eliminar productos*/
+/*FunciÃ³n que imprime el menÃº para eliminar productos*/
 void eliminarProductos(string &producto1,string &producto2,string &producto3,string &producto4,string &producto5,string &codigo1,string &codigo2,string &codigo3,string &codigo4,string &codigo5,string &codigoAux,double &precio1,double &precio2,double &precio3,double &precio4,double &precio5,int &totalProductos){
      system("cls");
      if(totalProductos==0)cout<<"No hay productos registrados";
      else{
           cout<<endl;
-          cout<<"Inserte el código del producto que quieres eliminar"<<endl;
+          cout<<"Inserte el cÃ³digo del producto que quieres eliminar"<<endl;
           cin>>codigoAux;
           if(codigoAux==codigo5) totalProductos--;
           if(codigoAux==codigo4) {producto4=producto5; codigo4=codigo5; precio4=precio5; totalProductos--;}
@@ -99,7 +101,7 @@ void eliminarProductos(string &producto1,string &producto2,string &producto3,str
 
 
 
-/*Función que imprime el menú de Camarero1*/
+/*FunciÃ³n que imprime el menÃº de Camarero1*/
 void menuCamarero(string claveCamarero,string clave1,string clave2,string clave3,string camarero1,string camarero2,string camarero3){
      system("cls");//permite borrar la pantalla
      if(claveCamarero==clave1)cout<<"Camarero: "<<camarero1<<endl;
@@ -114,15 +116,15 @@ void menuCamarero(string claveCamarero,string clave1,string clave2,string clave3
      imprimeLinea('+');
      }
 
-/*Función para eliminar productos de la cuenta*/
+/*FunciÃ³n para eliminar productos de la cuenta*/
 void eliminarProductosCamareros(string &producto1,string &producto2,string &producto3,string &producto4,string &producto5,string &codigo1,string &codigo2,string &codigo3,string &codigo4,string &codigo5,string &codigoAux,double &precio1,double &precio2,double &precio3,double &precio4,double &precio5,int totalProductos,double cuenta){
      system("cls");
      imprimeLinea('*');
      mostrarProductos(producto1,producto2,producto3,producto4,producto5,precio1,precio2,precio3,precio4,precio5,codigo1,codigo2,codigo3,codigo4,codigo5,totalProductos);
      imprimeLinea('*');
-     if(totalProductos==0) cout<<"No hay ningún producto en la carta"<<endl;
+     if(totalProductos==0) cout<<"No hay ningÃºn producto en la carta"<<endl;
      else{
-          cout<<"Introduzca el código del producto que quiere eliminar"<<endl;
+          cout<<"Introduzca el cÃ³digo del producto que quiere eliminar"<<endl;
           cin>>codigoAux;
           system("cls");
           if(codigoAux==codigo1) cout<<"Se ha eliminado el producto de la cuenta"<<endl;
@@ -142,17 +144,17 @@ void eliminarProductosCamareros(string &producto1,string &producto2,string &prod
           }
 }
 
-/*Función que muestra la cuenta*/
+/*FunciÃ³n que muestra la cuenta*/
 void mostrarCuenta(double cuenta){
      system("cls");
      cout<<"La cuenta es: "<<cuenta<<" euros";
      Sleep(2000);
 }
 
-/*Función que muestra la vuelta*/
+/*FunciÃ³n que muestra la vuelta*/
 void mostrarVuelta(double pago,double vuelta,double cuenta){
      system("cls");
-     cout<<"¿Cuánto ha dado el cliente?"<<endl;
+     cout<<"Â¿CuÃ¡nto ha dado el cliente?"<<endl;
      cin>>pago;
      system("cls");
      while(pago<cuenta){
@@ -166,7 +168,7 @@ void mostrarVuelta(double pago,double vuelta,double cuenta){
      Sleep(2000);
 }
 
-/*Función que reinicia la cuenta*/
+/*FunciÃ³n que reinicia la cuenta*/
 void reiniciarCuenta(double cuenta){
      system("cls");
      cuenta=0;
@@ -174,7 +176,7 @@ void reiniciarCuenta(double cuenta){
      Sleep(2000);
 }
 
-/*Función que cambia la clave del camarero*/
+/*FunciÃ³n que cambia la clave del camarero*/
 void cambiarClave(string &clave1,string &clave2,string &clave3,string &claveCamarero,string camareroAux,string camarero1,string camarero2,string camarero3){
      system("cls");
      if(camareroAux==camarero1){
@@ -188,12 +190,12 @@ void cambiarClave(string &clave1,string &clave2,string &clave3,string &claveCama
                                                                 }
                                    cout<<"Inserte su nueva clave"<<endl;
                                    cin>>clave1;
-                                   while (clave1.size()!=3){//la función size devuelve el tamaño de un string
-                                                     cout<<"Clave no válida, inserte una clave de 3 caracteres"<<endl;
+                                   while (clave1.size()!=3){//la funciÃ³n size devuelve el tamaÃ±o de un string
+                                                     cout<<"Clave no vÃ¡lida, inserte una clave de 3 caracteres"<<endl;
                                                      cin>>clave1;
                                                      }
                                    system("cls");
-                                   cout<<"Se ha cambiado la clave con éxito"<<endl;
+                                   cout<<"Se ha cambiado la clave con Ã©xito"<<endl;
                                    }
      if(camareroAux==camarero2){
                                    cout<<"Inserte su clave actual"<<endl;
@@ -206,12 +208,12 @@ void cambiarClave(string &clave1,string &clave2,string &clave3,string &claveCama
                                                                 }
                                    cout<<"Inserte su nueva clave"<<endl;
                                    cin>>clave2;
-                                   while (clave2.size()!=3){//la función size devuelve el tamaño de un string
-                                                     cout<<"Clave no válida, inserte una clave de 3 caracteres"<<endl;
+                                   while (clave2.size()!=3){//la funciÃ³n size devuelve el tamaÃ±o de un string
+                                                     cout<<"Clave no vÃ¡lida, inserte una clave de 3 caracteres"<<endl;
                                                      cin>>clave2;
                                                      }
                                    system("cls");
-                                   cout<<"Se ha cambiado la clave con éxito"<<endl;
+                                   cout<<"Se ha cambiado la clave con Ã©xito"<<endl;
                                    }
      if(camareroAux==camarero3){
                                    cout<<"Inserte su clave actual"<<endl;
@@ -224,19 +226,19 @@ void cambiarClave(string &clave1,string &clave2,string &clave3,string &claveCama
                                                                 }
                                    cout<<"Inserte su nueva clave"<<endl;
                                    cin>>clave3;
-                                   while (clave3.size()!=3){//la función size devuelve el tamaño de un string
-                                                     cout<<"Clave no válida, inserte una clave de 3 caracteres"<<endl;
+                                   while (clave3.size()!=3){//la funciÃ³n size devuelve el tamaÃ±o de un string
+                                                     cout<<"Clave no vÃ¡lida, inserte una clave de 3 caracteres"<<endl;
                                                      cin>>clave3;
                                                      }
                                    system("cls");
-                                   cout<<"Se ha cambiado la clave con éxito"<<endl;
+                                   cout<<"Se ha cambiado la clave con Ã©xito"<<endl;
                                    }
                                    Sleep(3000);
 
 }
 
 
-/*Función que comprueba la clave del gerente*/
+/*FunciÃ³n que comprueba la clave del gerente*/
 void compruebaClave(int claveGerente1,int claveGerente2){
      while(claveGerente1!=claveGerente2){
      cout<<"La clave no es correcta, insertela de nuevo por favor"<<endl;
@@ -258,13 +260,13 @@ void compruebaClaveCamarero(string clave1,string clave2,string clave3,string cla
 /*PROGRAMA PRINCIPAL*/
 int main(){
 char perfil;
-int opGerente=0;/*valor no incluido en menú*/ int claveGerente;
+int opGerente=0;/*valor no incluido en menÃº*/ int claveGerente;
 string claveCamarero;
-char opCamarero='z';//valor no incluido en menú
+char opCamarero='z';//valor no incluido en menÃº
 char opModCamarero='z', opModProducto='z';
 string camarero, camarero1, camarero2, camarero3, camareroAux; //Camareros
 string clave, clave1, clave2, clave3, claveAux, comprobarClave; //Clave de los camareros
-string codigo, codigo1, codigo2, codigo3, codigo4, codigo5, codigoAux; //Código de los productos
+string codigo, codigo1, codigo2, codigo3, codigo4, codigo5, codigoAux; //CÃ³digo de los productos
 int totalCamareros=0, totalProductos=0;
 double cuenta=0, vuelta, pago;
 string producto1, producto2, producto3, producto4, producto5, productoAux; //Productos
@@ -277,9 +279,9 @@ while (perfil!='s' && perfil!='S'){
       switch (perfil){
              case 'G':
              case 'g':
-                  opGerente=0;//valor que no esté en menú
+                  opGerente=0;//valor que no estÃ© en menÃº
                   system("cls");
-                  cout<<"Acceso Menú Gerente";
+                  cout<<"Acceso MenÃº Gerente";
                   imprimeLinea('*');
                   cout<<"Introduzca su clave"<<endl;
                   cin>>claveGerente;
@@ -292,13 +294,13 @@ while (perfil!='s' && perfil!='S'){
                                            case 1:
                                                 system("cls");
                                                 if(totalCamareros>=3)
-                                                                     cout<<"Su plantilla está completa"<<endl;
+                                                                     cout<<"Su plantilla estÃ¡ completa"<<endl;
                                                 else{
                                                      //Inserta nombre del camarero
                                                      cout<<"Inserte el nombre del camarero"<<endl;
                                                      cin>>camarero;
                                                      system("cls");
-                                                     while (camarero.size()!=5){//la función size devuelve el tamaño de un string
+                                                     while (camarero.size()!=5){//la funciÃ³n size devuelve el tamaÃ±o de un string
                                                      cout<<"Nombre no valido, inserte un nombre de 5 caracteres"<<endl;
                                                      cin>>camarero;
                                                      system("cls");
@@ -310,8 +312,8 @@ while (perfil!='s' && perfil!='S'){
                                                      cout<<"Inserte clave del camarero"<<endl;
                                                      cin>>clave;
                                                      system("cls");
-                                                     while (clave.size()!=3){//la función size devuelve el tamaño de un string
-                                                     cout<<"Clave no válida, inserte una clave de 3 caracteres"<<endl;
+                                                     while (clave.size()!=3){//la funciÃ³n size devuelve el tamaÃ±o de un string
+                                                     cout<<"Clave no vÃ¡lida, inserte una clave de 3 caracteres"<<endl;
                                                      cin>>clave;
                                                      system("cls");
                                                      }
@@ -332,7 +334,7 @@ while (perfil!='s' && perfil!='S'){
                                            case 3:
                                                 system("cls");
                                                 if(totalProductos>=5)
-                                                                     cout<<"No se pueden añadir más productos"<<endl;
+                                                                     cout<<"No se pueden aÃ±adir mÃ¡s productos"<<endl;
                                                 else{
                                                 //Introduce el nombre del producto
                                                 cout<<"Introduzca un producto"<<endl;
@@ -350,11 +352,11 @@ while (perfil!='s' && perfil!='S'){
                                                 if(totalProductos==3) cin>>precio4;
                                                 if(totalProductos==4) cin>>precio5;
                                                 system("cls");
-                                                //Introduce el código
-                                                cout<<"Inserte el código del producto"<<endl;
+                                                //Introduce el cÃ³digo
+                                                cout<<"Inserte el cÃ³digo del producto"<<endl;
                                                 cin>>codigo;
-                                                     while (codigo.size()!=2){//la función size devuelve el tamaño de un string
-                                                     cout<<"Codigo no valido, inserte un código de 2 caracteres"<<endl;
+                                                     while (codigo.size()!=2){//la funciÃ³n size devuelve el tamaÃ±o de un string
+                                                     cout<<"Codigo no valido, inserte un cÃ³digo de 2 caracteres"<<endl;
                                                      cin>>codigo;
                                                      system("cls");
                                                      }
@@ -389,7 +391,7 @@ while (perfil!='s' && perfil!='S'){
                                                      while(opModCamarero!='c' && opModCamarero!='C'){
                                                                               cout<<endl;
                                                                               imprimeLinea('-');
-                                                                              cout<<"¿Qué desea modificar?"<<endl;
+                                                                              cout<<"Â¿QuÃ© desea modificar?"<<endl;
                                                                               cout<<"A) Nombre"<<endl;
                                                                               cout<<"B) Clave"<<endl;
                                                                               cout<<"C) Salir"<<endl;
@@ -406,8 +408,8 @@ while (perfil!='s' && perfil!='S'){
                                                                                                             if(camareroAux==camarero1) {
                                                                                                                                        cout<<"Introduzca el nuevo nombre del camarero"<<endl;
                                                                                                                                        cin>>camareroAux;
-                                                                                                                                       while (camareroAux.size()!=5){//la función size devuelve el tamaño de un string
-                                                                                                                                       cout<<"Nombre no válido, inserte un nombre de 5 caracteres"<<endl;
+                                                                                                                                       while (camareroAux.size()!=5){//la funciÃ³n size devuelve el tamaÃ±o de un string
+                                                                                                                                       cout<<"Nombre no vÃ¡lido, inserte un nombre de 5 caracteres"<<endl;
                                                                                                                                        cin>>camareroAux;
                                                                                                                                        }
                                                                                                                                        camarero1=camareroAux;
@@ -419,8 +421,8 @@ while (perfil!='s' && perfil!='S'){
                                                                                                             if(camareroAux==camarero2) {
                                                                                                                                        cout<<"Introduzca el nuevo nombre del camarero"<<endl;
                                                                                                                                        cin>>camareroAux;
-                                                                                                                                       while (camareroAux.size()!=5){//la función size devuelve el tamaño de un string
-                                                                                                                                       cout<<"Nombre no válido, inserte un nombre de 5 caracteres"<<endl;
+                                                                                                                                       while (camareroAux.size()!=5){//la funciÃ³n size devuelve el tamaÃ±o de un string
+                                                                                                                                       cout<<"Nombre no vÃ¡lido, inserte un nombre de 5 caracteres"<<endl;
                                                                                                                                        cin>>camareroAux;
                                                                                                                                        }
                                                                                                                                        camarero2=camareroAux;
@@ -432,8 +434,8 @@ while (perfil!='s' && perfil!='S'){
                                                                                                             if(camareroAux==camarero3) {
                                                                                                                                        cout<<"Introduzca el nuevo nombre del camarero"<<endl;
                                                                                                                                        cin>>camareroAux;
-                                                                                                                                       while (camarero.size()!=5){//la función size devuelve el tamaño de un string
-                                                                                                                                       cout<<"Nombre no válido, inserte un nombre de 5 caracteres"<<endl;
+                                                                                                                                       while (camarero.size()!=5){//la funciÃ³n size devuelve el tamaÃ±o de un string
+                                                                                                                                       cout<<"Nombre no vÃ¡lido, inserte un nombre de 5 caracteres"<<endl;
                                                                                                                                        cin>>camareroAux;
                                                                                                                                        }
                                                                                                                                        camarero3=camareroAux;
@@ -457,8 +459,8 @@ while (perfil!='s' && perfil!='S'){
                                                                                                              if(camareroAux==camarero1) {
                                                                                                                                         cout<<"Introduzca la nueva clave del camarero"<<endl;
                                                                                                                                         cin>>claveAux;
-                                                                                                                                        while (clave.size()!=3){//la función size devuelve el tamaño de un string
-                                                                                                                                        cout<<"Clave no válida, inserte una clave de 3 caracteres"<<endl;
+                                                                                                                                        while (clave.size()!=3){//la funciÃ³n size devuelve el tamaÃ±o de un string
+                                                                                                                                        cout<<"Clave no vÃ¡lida, inserte una clave de 3 caracteres"<<endl;
                                                                                                                                         cin>>claveAux;
                                                                                                                                         }
                                                                                                                                         clave1=claveAux;
@@ -470,8 +472,8 @@ while (perfil!='s' && perfil!='S'){
                                                                                                              if(camareroAux==camarero2) {
                                                                                                                                         cout<<"Introduzca la nueva clave del camarero"<<endl;
                                                                                                                                         cin>>claveAux;
-                                                                                                                                        while (clave.size()!=3){//la función size devuelve el tamaño de un string
-                                                                                                                                        cout<<"Clave no válida, inserte una clave de 3 caracteres"<<endl;
+                                                                                                                                        while (clave.size()!=3){//la funciÃ³n size devuelve el tamaÃ±o de un string
+                                                                                                                                        cout<<"Clave no vÃ¡lida, inserte una clave de 3 caracteres"<<endl;
                                                                                                                                         cin>>claveAux;
                                                                                                                                         }
                                                                                                                                         clave2=claveAux;
@@ -482,8 +484,8 @@ while (perfil!='s' && perfil!='S'){
                                                                                                              if(camareroAux==camarero3) {
                                                                                                                                         cout<<"Introduzca la nueva clave del camarero"<<endl;
                                                                                                                                         cin>>claveAux;
-                                                                                                                                        while (clave.size()!=3){//la función size devuelve el tamaño de un string
-                                                                                                                                        cout<<"Clave no válida, inserte una clave de 3 caracteres"<<endl;
+                                                                                                                                        while (clave.size()!=3){//la funciÃ³n size devuelve el tamaÃ±o de un string
+                                                                                                                                        cout<<"Clave no vÃ¡lida, inserte una clave de 3 caracteres"<<endl;
                                                                                                                                         cin>>claveAux;
                                                                                                                                         }
                                                                                                                                         clave3=claveAux;
@@ -497,11 +499,11 @@ while (perfil!='s' && perfil!='S'){
                                                                                                      case'C':
                                                                                                      case'c':
                                                                                                              system("cls");
-                                                                                                             cout<<"Volviendo al menú del gerente...";
+                                                                                                             cout<<"Volviendo al menÃº del gerente...";
                                                                                                              Sleep(2000);
                                                                                                              break;
                                                                                                      default:
-                                                                                                             cout<<"Opción incorrecta";
+                                                                                                             cout<<"OpciÃ³n incorrecta";
                                                                                                              Sleep(2000);
 
                                                                                                     }
@@ -518,10 +520,10 @@ while (perfil!='s' && perfil!='S'){
                                                 else{
                                                      opModProducto='z';
                                                      while(opModProducto!='d' && opModProducto!='D'){
-                                                                              cout<<"¿Qué desea modificar?"<<endl;
+                                                                              cout<<"Â¿QuÃ© desea modificar?"<<endl;
                                                                               cout<<"A) Nombre del producto"<<endl;
                                                                               cout<<"B) Clave del producto"<<endl;
-                                                                              cout<<"C) Código del producto"<<endl;
+                                                                              cout<<"C) CÃ³digo del producto"<<endl;
                                                                               cout<<"D) Salir"<<endl;
                                                                               cin>>opModProducto;
                                                                               system("cls");
@@ -605,11 +607,11 @@ while (perfil!='s' && perfil!='S'){
                                                                                                             cin>>productoAux;
                                                                                                               system("cls");
                                                                                                             if(productoAux==producto1) {
-                                                                                                                                       cout<<"Introduzca el nuevo código del producto"<<endl;
+                                                                                                                                       cout<<"Introduzca el nuevo cÃ³digo del producto"<<endl;
                                                                                                                                        cin>>codigoAux;
-                                                                                                                                       while (codigoAux.size()!=2){//la función size devuelve el tamaño de un string
+                                                                                                                                       while (codigoAux.size()!=2){//la funciÃ³n size devuelve el tamaÃ±o de un string
                                                                                                                                        system("cls");
-                                                                                                                                       cout<<"Código no válido, inserte un código de 2 caracteres"<<endl;
+                                                                                                                                       cout<<"CÃ³digo no vÃ¡lido, inserte un cÃ³digo de 2 caracteres"<<endl;
                                                                                                                                        cin>>codigoAux;
                                                                                                                                        system("cls");
                                                                                                                                        }
@@ -617,14 +619,14 @@ while (perfil!='s' && perfil!='S'){
                                                                                                                                        cout<<"Realizando cambios..."<<endl;
                                                                                                                                        Sleep(2000);
                                                                                                                                        system("cls");
-                                                                                                                                       cout<<"Se ha modificado el código del producto";
+                                                                                                                                       cout<<"Se ha modificado el cÃ³digo del producto";
                                                                                                                                        }
                                                                                                             if(productoAux==producto2) {
-                                                                                                                                       cout<<"Introduzca el nuevo código del producto"<<endl;
+                                                                                                                                       cout<<"Introduzca el nuevo cÃ³digo del producto"<<endl;
                                                                                                                                        cin>>codigoAux;
                                                                                                                                        system("cls");
-                                                                                                                                       while (codigoAux.size()!=2){//la función size devuelve el tamaño de un string
-                                                                                                                                       cout<<"Código no válido, inserte un código de 2 caracteres"<<endl;
+                                                                                                                                       while (codigoAux.size()!=2){//la funciÃ³n size devuelve el tamaÃ±o de un string
+                                                                                                                                       cout<<"CÃ³digo no vÃ¡lido, inserte un cÃ³digo de 2 caracteres"<<endl;
                                                                                                                                        cin>>codigoAux;
                                                                                                                                        system("cls");
                                                                                                                                        }
@@ -632,14 +634,14 @@ while (perfil!='s' && perfil!='S'){
                                                                                                                                        cout<<"Realizando cambios..."<<endl;
                                                                                                                                        Sleep(2000);
                                                                                                                                        system("cls");
-                                                                                                                                       cout<<"Se ha modificado el código del producto";
+                                                                                                                                       cout<<"Se ha modificado el cÃ³digo del producto";
                                                                                                                                        }
                                                                                                             if(productoAux==producto3) {
-                                                                                                                                       cout<<"Introduzca el nuevo código del producto"<<endl;
+                                                                                                                                       cout<<"Introduzca el nuevo cÃ³digo del producto"<<endl;
                                                                                                                                        cin>>codigoAux;
                                                                                                                                        system("cls");
-                                                                                                                                       while (codigoAux.size()!=2){//la función size devuelve el tamaño de un string
-                                                                                                                                       cout<<"Código no válido, inserte un código de 2 caracteres"<<endl;
+                                                                                                                                       while (codigoAux.size()!=2){//la funciÃ³n size devuelve el tamaÃ±o de un string
+                                                                                                                                       cout<<"CÃ³digo no vÃ¡lido, inserte un cÃ³digo de 2 caracteres"<<endl;
                                                                                                                                        cin>>codigoAux;
                                                                                                                                        system("cls");
                                                                                                                                        }
@@ -647,17 +649,17 @@ while (perfil!='s' && perfil!='S'){
                                                                                                                                        cout<<"Realizando cambios..."<<endl;
                                                                                                                                        Sleep(2000);
                                                                                                                                        system("cls");
-                                                                                                                                       cout<<"Se ha modificado el código del prodcuto";
+                                                                                                                                       cout<<"Se ha modificado el cÃ³digo del prodcuto";
                                                                                                                                        }
                                                                                                                                        Sleep(2000);
                                                                                                             break;
                                                                                                      case'D':
                                                                                                      case'd':
-                                                                                                             cout<<"Volviendo al menú principal...";
+                                                                                                             cout<<"Volviendo al menÃº principal...";
                                                                                                              Sleep(2000);
                                                                                                              break;
                                                                                                      default:
-                                                                                                             cout<<"Opción incorrecta";
+                                                                                                             cout<<"OpciÃ³n incorrecta";
                                                                                                              Sleep(2000);
                                                                                                              break;
                                                                                                     }
@@ -684,11 +686,11 @@ while (perfil!='s' && perfil!='S'){
              break;
              case 'C':
              case 'c':
-                  opCamarero='z';//opción que no esté en menú camarero
+                  opCamarero='z';//opciÃ³n que no estÃ© en menÃº camarero
                   system("cls");
                   if(totalCamareros==0) {cout<<"No hay camareros registrados"<<endl; Sleep(3000);}
                   else{
-                  cout<<"Acceso Menú Camarero";
+                  cout<<"Acceso MenÃº Camarero";
                   imprimeLinea('*');
                   cout<<"Introduzca su clave"<<endl;
                   cin>>claveCamarero;
@@ -703,16 +705,16 @@ while (perfil!='s' && perfil!='S'){
                                            case 'a':
                                            case 'A':
                                                 mostrarProductos(producto1,producto2,producto3,producto4,producto5,precio1,precio2,precio3,precio4,precio5,codigo1,codigo2,codigo3,codigo4,codigo5,totalProductos);
-                                                if(totalProductos==0) cout<<"No hay ningún producto en la carta"<<endl;
+                                                if(totalProductos==0) cout<<"No hay ningÃºn producto en la carta"<<endl;
                                                 else{
-                                                     cout<<"Introduzcas el código del producto que quiere añandir"<<endl;
+                                                     cout<<"Introduzcas el cÃ³digo del producto que quiere aÃ±andir"<<endl;
                                                      cin>>codigoAux;
                                                      system("cls");
-                                                     if(codigoAux==codigo1) cout<<"Se ha añadido a la cuenta el producto"<<endl;
-                                                     if(codigoAux==codigo2) cout<<"Se ha añadido a la cuenta el producto"<<endl;
-                                                     if(codigoAux==codigo3) cout<<"Se ha añadido a la cuenta el producto"<<endl;
-                                                     if(codigoAux==codigo4) cout<<"Se ha añadido a la cuenta el producto"<<endl;
-                                                     if(codigoAux==codigo5) cout<<"Se ha añadido a la cuenta el producto"<<endl;
+                                                     if(codigoAux==codigo1) cout<<"Se ha aÃ±adido a la cuenta el producto"<<endl;
+                                                     if(codigoAux==codigo2) cout<<"Se ha aÃ±adido a la cuenta el producto"<<endl;
+                                                     if(codigoAux==codigo3) cout<<"Se ha aÃ±adido a la cuenta el producto"<<endl;
+                                                     if(codigoAux==codigo4) cout<<"Se ha aÃ±adido a la cuenta el producto"<<endl;
+                                                     if(codigoAux==codigo5) cout<<"Se ha aÃ±adido a la cuenta el producto"<<endl;
                                                      Sleep(2000);
                                                      system("cls");
                                                      if(codigoAux==codigo1) cuenta=cuenta+precio1;
