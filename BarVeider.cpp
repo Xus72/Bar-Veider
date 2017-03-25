@@ -13,253 +13,45 @@ Ha sido desarollado en el entorno gráfico Dev C++, aunque también puede ser di
 using namespace std;
 
 /*Función que imprime una línea de 30 símbolos con caracater que se le pasa*/
-void imprimeLinea(char simbolo){
-     cout<<endl;
-     for (int i=1; i<=30; i++)
-         cout<<simbolo;
-     cout<<endl;
-     }
+void imprimeLinea(char simbolo);
 /*Función que imprime el menú principal*/
-void menuPrincipal(){
-     system("cls");//permite borrar la pantalla
-     cout<<"Bienvenido al BAR VEIDER,seleccione su perfil..."<<endl;
-     imprimeLinea('*');
-     cout<<"G) Gerente"<<endl<<"C) Camarero"<<endl<<"S) Salir";
-     imprimeLinea('*');
-     }
+void menuPrincipal();
 /*Función que imprime el menú Gerente*/
-void menuGerente(){
-     system("cls");//permite borrar la pantalla
-     cout<<"Seleccione operacion..."<<endl;
-     imprimeLinea('-');
-     cout<<"1)Camarero Nuevo      2)Eliminar Camarero"<<endl<<"3)Producto Nuevo      4)Eliminar Producto"<<endl;
-     cout<<"5)Modificar Camarero  6)Modificar Producto"<<endl<<"7)Mostrar Productos   8)Mostrar Camareros"<<endl;
-     cout<<"9)Volver al menu principal";
-     imprimeLinea('-');
-     }
+void menuGerente();
 
 /*Función que imprime los camareros de la plantilla*/
-void mostrarCamareros(string camarero1,string camarero2,string camarero3,string clave1,string clave2,string clave3,int totalCamareros){
-     system("cls");
-     if(totalCamareros==0) cout<<"No tiene camareros registrados"<<endl;
-     if(totalCamareros==1) {cout<<"Nombre     Clave"<<endl<<camarero1<<"     "<<clave1<<endl;}
-     if(totalCamareros==2) {cout<<"Nombre     Clave"<<endl<<camarero1<<"     "<<clave1<<endl<<camarero2<<"     "<<clave2<<endl;}
-     if(totalCamareros==3) {cout<<"Nombre     Clave"<<endl<<camarero1<<"     "<<clave1<<endl<<camarero2<<"     "<<clave2<<endl<<camarero3<<"     "<<clave3<<endl;}
-     }
+void mostrarCamareros(string camarero1,string camarero2,string camarero3,string clave1,string clave2,string clave3,int totalCamareros);
 
 /*Función que imprime los productos que están registrados*/
-void mostrarProductos(string producto1,string producto2,string producto3,string producto4,string producto5,double precio1,double precio2,double precio3,double precio4,double precio5,string codigo1,string codigo2,string codigo3,string codigo4,string codigo5,int totalProductos){
-     system("cls");
-     imprimeLinea('*');
-     if(totalProductos==0) cout<<"No dispone de ningún producto"<<endl;
-     if(totalProductos==1) {cout<<"Dispone de los siguientes productos:"<<endl; cout<<"Código: "<<codigo1<<" "<<"Producto: "<<producto1<<" "<<"Precio: "<<precio1<<endl;}
-     if(totalProductos==2) {cout<<"Dispone de los siguientes productos:"<<endl; cout<<"Código: "<<codigo1<<" "<<"Producto: "<<producto1<<" "<<"Precio: "<<precio1<<endl;cout<<"Código: "<<codigo2<<" "<<"Producto: "<<producto2<<" "<<"Precio: "<<precio2<<endl;}
-     if(totalProductos==3) {cout<<"Dispone de los siguientes productos:"<<endl; cout<<"Código: "<<codigo1<<" "<<"Producto: "<<producto1<<" "<<"Precio: "<<precio1<<endl;cout<<"Código: "<<codigo2<<" "<<"Producto: "<<producto2<<" "<<"Precio: "<<precio2<<endl;cout<<"Código: "<<codigo3<<" "<<"Producto: "<<producto3<<" "<<"Precio: "<<precio3<<endl;}
-     if(totalProductos==4) {cout<<"Dispone de los siguientes productos:"<<endl; cout<<"Código: "<<codigo1<<" "<<"Producto: "<<producto1<<" "<<"Precio: "<<precio1<<endl;cout<<"Código: "<<codigo2<<" "<<"Producto: "<<producto2<<" "<<"Precio: "<<precio2<<endl;cout<<"Código: "<<codigo3<<" "<<"Producto: "<<producto3<<" "<<"Precio: "<<precio3<<endl;cout<<"Código: "<<codigo4<<" "<<"Producto: "<<producto4<<" "<<"Precio: "<<precio4<<endl;}
-     if(totalProductos==5) {cout<<"Dispone de los siguientes productos:"<<endl; cout<<"Código: "<<codigo1<<" "<<"Producto: "<<producto1<<" "<<"Precio: "<<precio1<<endl;cout<<"Código: "<<codigo2<<" "<<"Producto: "<<producto2<<" "<<"Precio: "<<precio2<<endl;cout<<"Código: "<<codigo3<<" "<<"Producto: "<<producto3<<" "<<"Precio: "<<precio3<<endl;cout<<"Código: "<<codigo4<<" "<<"Producto: "<<producto4<<" "<<"Precio: "<<precio4<<endl;cout<<"Código: "<<codigo5<<" "<<"Producto: "<<producto5<<" "<<"Precio: "<<precio5<<endl;}
-     imprimeLinea('*');
-}
+void mostrarProductos(string producto1,string producto2,string producto3,string producto4,string producto5,double precio1,double precio2,double precio3,double precio4,double precio5,string codigo1,string codigo2,string codigo3,string codigo4,string codigo5,int totalProductos);
 
 /*Función que imprime el menú para eliminar camareros*/
-void eliminarCamareros(string &camarero1,string &camarero2,string &camarero3,string &camareroAux,int &totalCamareros,string &clave1,string &clave2,string &clave3){
-     system("cls");
-     if(totalCamareros==0) cout<<"No hay camareros registrados";
-     else{
-     cout<<endl;
-     cout<<"Inserte el nombre del camarero quieres eliminar"<<endl;
-     cin>>camareroAux;
-     if(camareroAux==camarero3) totalCamareros--;
-     if(camareroAux==camarero2) {camarero2=camarero3; clave2=clave3; totalCamareros--;}
-     if(camareroAux==camarero1) {camarero1=camarero2; clave1=clave2;  camarero2=camarero3; clave2=clave3; totalCamareros--;}
-     system("cls");
-     cout<<"Eliminando camarero..."<<endl;
-     cout<<endl;
-     Sleep(2000);
-     system("cls");
-     cout<<"El camarero ha sido eleminado";
-     Sleep(2000);
-     }
-     Sleep(3000);
-     }
+void eliminarCamareros(string &camarero1,string &camarero2,string &camarero3,string &camareroAux,int &totalCamareros,string &clave1,string &clave2,string &clave3);
 
 /*Función que imprime el menú para eliminar productos*/
-void eliminarProductos(string &producto1,string &producto2,string &producto3,string &producto4,string &producto5,string &codigo1,string &codigo2,string &codigo3,string &codigo4,string &codigo5,string &codigoAux,double &precio1,double &precio2,double &precio3,double &precio4,double &precio5,int &totalProductos){
-     system("cls");
-     if(totalProductos==0)cout<<"No hay productos registrados";
-     else{
-          cout<<endl;
-          cout<<"Inserte el código del producto que quieres eliminar"<<endl;
-          cin>>codigoAux;
-          if(codigoAux==codigo5) totalProductos--;
-          if(codigoAux==codigo4) {producto4=producto5; codigo4=codigo5; precio4=precio5; totalProductos--;}
-          if(codigoAux==codigo3) {producto3=producto4; codigo3=codigo4; precio3=precio4; producto4=producto5; codigo4=codigo5; precio4=precio5; totalProductos--;}
-          if(codigoAux==codigo2) {producto2=producto3; codigo2=codigo3; precio2=precio3; producto3=producto4; codigo3=codigo4; precio3=precio4; producto4=producto5; codigo4=codigo5; precio4=precio5; totalProductos--;}
-          if(codigoAux==codigo1) {producto1=producto2; codigo1=codigo2; precio1=precio2; producto2=producto3; codigo2=codigo3; precio2=precio3; producto3=producto4; codigo3=codigo4; precio3=precio4; producto4=producto5; codigo4=codigo5; precio4=precio5; totalProductos--;}
-     system("cls");
-     cout<<"Eliminando producto..."<<endl;
-     Sleep(2000);
-     cout<<"El producto ha sido eliminado";
-     Sleep(2000);
-     }
-     Sleep(3000);
-     }
-
-
+void eliminarProductos(string &producto1,string &producto2,string &producto3,string &producto4,string &producto5,string &codigo1,string &codigo2,string &codigo3,string &codigo4,string &codigo5,string &codigoAux,double &precio1,double &precio2,double &precio3,double &precio4,double &precio5,int &totalProductos);
 
 /*Función que imprime el menú de Camarero1*/
-void menuCamarero(string claveCamarero,string clave1,string clave2,string clave3,string camarero1,string camarero2,string camarero3){
-     system("cls");//permite borrar la pantalla
-     if(claveCamarero==clave1)cout<<"Camarero: "<<camarero1<<endl;
-     if(claveCamarero==clave2)cout<<"Camarero: "<<camarero2<<endl;
-     if(claveCamarero==clave3)cout<<"Camarero: "<<camarero3<<endl;
-     cout<<"Seleccione operacion..."<<endl;
-     imprimeLinea('+');
-     cout<<"a)Anadir producto a la cuenta    b)Quitar producto de la cuenta"<<endl;
-     cout<<"c)Obtener cuenta                 d)Obtener vuelta"<<endl;
-     cout<<"e)Cambiar clave                  f)Mostrar productos"<<endl;
-     cout<<"g)Reiniciar cuenta               h)Volver al menu principal";
-     imprimeLinea('+');
-     }
+void menuCamarero(string claveCamarero,string clave1,string clave2,string clave3,string camarero1,string camarero2,string camarero3);
 
 /*Función para eliminar productos de la cuenta*/
-void eliminarProductosCamareros(string &producto1,string &producto2,string &producto3,string &producto4,string &producto5,string &codigo1,string &codigo2,string &codigo3,string &codigo4,string &codigo5,string &codigoAux,double &precio1,double &precio2,double &precio3,double &precio4,double &precio5,int totalProductos,double cuenta){
-     system("cls");
-     imprimeLinea('*');
-     mostrarProductos(producto1,producto2,producto3,producto4,producto5,precio1,precio2,precio3,precio4,precio5,codigo1,codigo2,codigo3,codigo4,codigo5,totalProductos);
-     imprimeLinea('*');
-     if(totalProductos==0) cout<<"No hay ningún producto en la carta"<<endl;
-     else{
-          cout<<"Introduzca el código del producto que quiere eliminar"<<endl;
-          cin>>codigoAux;
-          system("cls");
-          if(codigoAux==codigo1) cout<<"Se ha eliminado el producto de la cuenta"<<endl;
-          if(codigoAux==codigo2) cout<<"Se ha eliminado el producto de la cuenta"<<endl;
-          if(codigoAux==codigo3) cout<<"Se ha eliminado el producto de la cuenta"<<endl;
-          if(codigoAux==codigo4) cout<<"Se ha eliminado el producto de la cuenta"<<endl;
-          if(codigoAux==codigo5) cout<<"Se ha eliminado el producto de la cuenta"<<endl;
-          Sleep(2000);
-          system("cls");
-          if(codigoAux==codigo1) cuenta=cuenta-precio1;
-          if(codigoAux==codigo2) cuenta=cuenta-precio2;
-          if(codigoAux==codigo3) cuenta=cuenta-precio3;
-          if(codigoAux==codigo4) cuenta=cuenta-precio4;
-          if(codigoAux==codigo5) cuenta=cuenta-precio5;
-          cout<<"Cuenta: "<<cuenta<<" euros";
-          Sleep(2000);
-          }
-}
+void eliminarProductosCamareros(string &producto1,string &producto2,string &producto3,string &producto4,string &producto5,string &codigo1,string &codigo2,string &codigo3,string &codigo4,string &codigo5,string &codigoAux,double &precio1,double &precio2,double &precio3,double &precio4,double &precio5,int totalProductos,double cuenta);
 
 /*Función que muestra la cuenta*/
-void mostrarCuenta(double cuenta){
-     system("cls");
-     cout<<"La cuenta es: "<<cuenta<<" euros";
-     Sleep(2000);
-}
+void mostrarCuenta(double cuenta);
 
 /*Función que muestra la vuelta*/
-void mostrarVuelta(double pago,double vuelta,double cuenta){
-     system("cls");
-     cout<<"¿Cuánto ha dado el cliente?"<<endl;
-     cin>>pago;
-     system("cls");
-     while(pago<cuenta){
-     cout<<"No es sufiente para pagar";
-     cin>>pago;
-     }
-     vuelta=pago-cuenta;
-     cout<<"La vuelta es: "<<vuelta<<" euros";
-     Sleep(3000);
-     cuenta=0;
-     Sleep(2000);
-}
+void mostrarVuelta(double pago,double vuelta,double cuenta);
 
 /*Función que reinicia la cuenta*/
-void reiniciarCuenta(double cuenta){
-     system("cls");
-     cuenta=0;
-     cout<<"La cuenta ha sido reinicida";
-     Sleep(2000);
-}
+void reiniciarCuenta(double cuenta);
 
 /*Función que cambia la clave del camarero*/
-void cambiarClave(string &clave1,string &clave2,string &clave3,string &claveCamarero,string camareroAux,string camarero1,string camarero2,string camarero3){
-     system("cls");
-     if(camareroAux==camarero1){
-                                   cout<<"Inserte su clave actual"<<endl;
-                                   cin>>claveCamarero;
-                                   system("cls");
-                                   while(claveCamarero!=clave1){
-                                                                cout<<"Clave incorrecta, insertela de nuevo"<<endl;
-                                                                cin>>claveCamarero;
-                                                                system("cls");
-                                                                }
-                                   cout<<"Inserte su nueva clave"<<endl;
-                                   cin>>clave1;
-                                   while (clave1.size()!=3){//la función size devuelve el tamaño de un string
-                                                     cout<<"Clave no válida, inserte una clave de 3 caracteres"<<endl;
-                                                     cin>>clave1;
-                                                     }
-                                   system("cls");
-                                   cout<<"Se ha cambiado la clave con éxito"<<endl;
-                                   }
-     if(camareroAux==camarero2){
-                                   cout<<"Inserte su clave actual"<<endl;
-                                   cin>>claveCamarero;
-                                   system("cls");
-                                   while(claveCamarero!=clave2){
-                                                                cout<<"Clave incorrecta, insertela de nuevo"<<endl;
-                                                                cin>>claveCamarero;
-                                                                system("cls");
-                                                                }
-                                   cout<<"Inserte su nueva clave"<<endl;
-                                   cin>>clave2;
-                                   while (clave2.size()!=3){//la función size devuelve el tamaño de un string
-                                                     cout<<"Clave no válida, inserte una clave de 3 caracteres"<<endl;
-                                                     cin>>clave2;
-                                                     }
-                                   system("cls");
-                                   cout<<"Se ha cambiado la clave con éxito"<<endl;
-                                   }
-     if(camareroAux==camarero3){
-                                   cout<<"Inserte su clave actual"<<endl;
-                                   cin>>claveCamarero;
-                                   system("cls");
-                                   while(claveCamarero!=clave3){
-                                                                cout<<"Clave incorrecta, insertela de nuevo"<<endl;
-                                                                cin>>claveCamarero;
-                                                                system("cls");
-                                                                }
-                                   cout<<"Inserte su nueva clave"<<endl;
-                                   cin>>clave3;
-                                   while (clave3.size()!=3){//la función size devuelve el tamaño de un string
-                                                     cout<<"Clave no válida, inserte una clave de 3 caracteres"<<endl;
-                                                     cin>>clave3;
-                                                     }
-                                   system("cls");
-                                   cout<<"Se ha cambiado la clave con éxito"<<endl;
-                                   }
-                                   Sleep(3000);
-
-}
-
+void cambiarClave(string &clave1,string &clave2,string &clave3,string &claveCamarero,string camareroAux,string camarero1,string camarero2,string camarero3)
 
 /*Función que comprueba la clave del gerente*/
-void compruebaClave(int claveGerente1,int claveGerente2){
-     while(claveGerente1!=claveGerente2){
-     cout<<"La clave no es correcta, insertela de nuevo por favor"<<endl;
-     cin>>claveGerente2;
-     }
-     }
-void compruebaClaveCamarero(string clave1,string clave2,string clave3,string claveCamarero,string &camareroAux,string &camarero1,string &camarero2,string &camarero3){
-     while(claveCamarero!=clave1 && claveCamarero!=clave2 && claveCamarero!=clave3){
-     cout<<"La clave no es correcta, insertela de nuevo por favor"<<endl;
-     cin>>claveCamarero;
-     }
-     if(claveCamarero==clave1)camareroAux=camarero1;
-     if(claveCamarero==clave2)camareroAux=camarero2;
-     if(claveCamarero==clave3)camareroAux=camarero3;
-     }
-
+void compruebaClave(int claveGerente1,int claveGerente2);
+void compruebaClaveCamarero(string clave1,string clave2,string clave3,string claveCamarero,string &camareroAux,string &camarero1,string &camarero2,string &camarero3);
 
 
 /*PROGRAMA PRINCIPAL*/
@@ -786,3 +578,264 @@ while (perfil!='s' && perfil!='S'){
 
     getch();
     }
+
+void menuPrincipal(){
+     system("cls");//permite borrar la pantalla
+     cout<<"Bienvenido al BAR VEIDER,seleccione su perfil..."<<endl;
+     imprimeLinea('*');
+     cout<<"G) Gerente"<<endl<<"C) Camarero"<<endl<<"S) Salir";
+     imprimeLinea('*');
+     }
+
+void imprimeLinea(char simbolo){
+     cout<<endl;
+     for (int i=1; i<=30; i++)
+         cout<<simbolo;
+     cout<<endl;
+     }
+
+void menuGerente(){
+     system("cls");//permite borrar la pantalla
+     cout<<"Seleccione operacion..."<<endl;
+     imprimeLinea('-');
+     cout<<"1)Camarero Nuevo      2)Eliminar Camarero"<<endl<<"3)Producto Nuevo      4)Eliminar Producto"<<endl;
+     cout<<"5)Modificar Camarero  6)Modificar Producto"<<endl<<"7)Mostrar Productos   8)Mostrar Camareros"<<endl;
+     cout<<"9)Volver al menu principal";
+     imprimeLinea('-');
+     }
+
+void mostrarCamareros(string camarero1,string camarero2,string camarero3,string clave1,string clave2,string clave3,int totalCamareros){
+     system("cls");
+     if(totalCamareros==0) cout<<"No tiene camareros registrados"<<endl;
+     if(totalCamareros==1) {cout<<"Nombre     Clave"<<endl<<camarero1<<"     "<<clave1<<endl;}
+     if(totalCamareros==2) {cout<<"Nombre     Clave"<<endl<<camarero1<<"     "<<clave1<<endl<<camarero2<<"     "<<clave2<<endl;}
+     if(totalCamareros==3) {cout<<"Nombre     Clave"<<endl<<camarero1<<"     "<<clave1<<endl<<camarero2<<"     "<<clave2<<endl<<camarero3<<"     "<<clave3<<endl;}
+     }
+
+void mostrarProductos(string producto1,string producto2,string producto3,string producto4,string producto5,double precio1,double precio2,double precio3,double precio4,double precio5,string codigo1,string codigo2,string codigo3,string codigo4,string codigo5,int totalProductos){
+     system("cls");
+     imprimeLinea('*');
+     if(totalProductos==0) cout<<"No dispone de ningún producto"<<endl;
+     if(totalProductos==1) {cout<<"Dispone de los siguientes productos:"<<endl; cout<<"Código: "<<codigo1<<" "<<"Producto: "<<producto1<<" "<<"Precio: "<<precio1<<endl;}
+     if(totalProductos==2) {cout<<"Dispone de los siguientes productos:"<<endl; cout<<"Código: "<<codigo1<<" "<<"Producto: "<<producto1<<" "<<"Precio: "<<precio1<<endl;cout<<"Código: "<<codigo2<<" "<<"Producto: "<<producto2<<" "<<"Precio: "<<precio2<<endl;}
+     if(totalProductos==3) {cout<<"Dispone de los siguientes productos:"<<endl; cout<<"Código: "<<codigo1<<" "<<"Producto: "<<producto1<<" "<<"Precio: "<<precio1<<endl;cout<<"Código: "<<codigo2<<" "<<"Producto: "<<producto2<<" "<<"Precio: "<<precio2<<endl;cout<<"Código: "<<codigo3<<" "<<"Producto: "<<producto3<<" "<<"Precio: "<<precio3<<endl;}
+     if(totalProductos==4) {cout<<"Dispone de los siguientes productos:"<<endl; cout<<"Código: "<<codigo1<<" "<<"Producto: "<<producto1<<" "<<"Precio: "<<precio1<<endl;cout<<"Código: "<<codigo2<<" "<<"Producto: "<<producto2<<" "<<"Precio: "<<precio2<<endl;cout<<"Código: "<<codigo3<<" "<<"Producto: "<<producto3<<" "<<"Precio: "<<precio3<<endl;cout<<"Código: "<<codigo4<<" "<<"Producto: "<<producto4<<" "<<"Precio: "<<precio4<<endl;}
+     if(totalProductos==5) {cout<<"Dispone de los siguientes productos:"<<endl; cout<<"Código: "<<codigo1<<" "<<"Producto: "<<producto1<<" "<<"Precio: "<<precio1<<endl;cout<<"Código: "<<codigo2<<" "<<"Producto: "<<producto2<<" "<<"Precio: "<<precio2<<endl;cout<<"Código: "<<codigo3<<" "<<"Producto: "<<producto3<<" "<<"Precio: "<<precio3<<endl;cout<<"Código: "<<codigo4<<" "<<"Producto: "<<producto4<<" "<<"Precio: "<<precio4<<endl;cout<<"Código: "<<codigo5<<" "<<"Producto: "<<producto5<<" "<<"Precio: "<<precio5<<endl;}
+     imprimeLinea('*');
+}
+
+void eliminarCamareros(string &camarero1,string &camarero2,string &camarero3,string &camareroAux,int &totalCamareros,string &clave1,string &clave2,string &clave3){
+     system("cls");
+     if(totalCamareros==0) cout<<"No hay camareros registrados";
+     else{
+     cout<<endl;
+     cout<<"Inserte el nombre del camarero quieres eliminar"<<endl;
+     cin>>camareroAux;
+     if(camareroAux==camarero3) totalCamareros--;
+     if(camareroAux==camarero2) {camarero2=camarero3; clave2=clave3; totalCamareros--;}
+     if(camareroAux==camarero1) {camarero1=camarero2; clave1=clave2;  camarero2=camarero3; clave2=clave3; totalCamareros--;}
+     system("cls");
+     cout<<"Eliminando camarero..."<<endl;
+     cout<<endl;
+     Sleep(2000);
+     system("cls");
+     cout<<"El camarero ha sido eleminado";
+     Sleep(2000);
+     }
+     Sleep(3000);
+     }
+
+void eliminarProductos(string &producto1,string &producto2,string &producto3,string &producto4,string &producto5,string &codigo1,string &codigo2,string &codigo3,string &codigo4,string &codigo5,string &codigoAux,double &precio1,double &precio2,double &precio3,double &precio4,double &precio5,int &totalProductos){
+     system("cls");
+     if(totalProductos==0)cout<<"No hay productos registrados";
+     else{
+          cout<<endl;
+          cout<<"Inserte el código del producto que quieres eliminar"<<endl;
+          cin>>codigoAux;
+          if(codigoAux==codigo5) totalProductos--;
+          if(codigoAux==codigo4) {producto4=producto5; codigo4=codigo5; precio4=precio5; totalProductos--;}
+          if(codigoAux==codigo3) {producto3=producto4; codigo3=codigo4; precio3=precio4; producto4=producto5; codigo4=codigo5; precio4=precio5; totalProductos--;}
+          if(codigoAux==codigo2) {producto2=producto3; codigo2=codigo3; precio2=precio3; producto3=producto4; codigo3=codigo4; precio3=precio4; producto4=producto5; codigo4=codigo5; precio4=precio5; totalProductos--;}
+          if(codigoAux==codigo1) {producto1=producto2; codigo1=codigo2; precio1=precio2; producto2=producto3; codigo2=codigo3; precio2=precio3; producto3=producto4; codigo3=codigo4; precio3=precio4; producto4=producto5; codigo4=codigo5; precio4=precio5; totalProductos--;}
+     system("cls");
+     cout<<"Eliminando producto..."<<endl;
+     Sleep(2000);
+     cout<<"El producto ha sido eliminado";
+     Sleep(2000);
+     }
+     Sleep(3000);
+     }
+
+void menuCamarero(string claveCamarero,string clave1,string clave2,string clave3,string camarero1,string camarero2,string camarero3){
+     system("cls");//permite borrar la pantalla
+     if(claveCamarero==clave1)cout<<"Camarero: "<<camarero1<<endl;
+     if(claveCamarero==clave2)cout<<"Camarero: "<<camarero2<<endl;
+     if(claveCamarero==clave3)cout<<"Camarero: "<<camarero3<<endl;
+     cout<<"Seleccione operacion..."<<endl;
+     imprimeLinea('+');
+     cout<<"a)Anadir producto a la cuenta    b)Quitar producto de la cuenta"<<endl;
+     cout<<"c)Obtener cuenta                 d)Obtener vuelta"<<endl;
+     cout<<"e)Cambiar clave                  f)Mostrar productos"<<endl;
+     cout<<"g)Reiniciar cuenta               h)Volver al menu principal";
+     imprimeLinea('+');
+     }
+
+void eliminarProductosCamareros(string &producto1,string &producto2,string &producto3,string &producto4,string &producto5,string &codigo1,string &codigo2,string &codigo3,string &codigo4,string &codigo5,string &codigoAux,double &precio1,double &precio2,double &precio3,double &precio4,double &precio5,int totalProductos,double cuenta){
+     system("cls");
+     imprimeLinea('*');
+     mostrarProductos(producto1,producto2,producto3,producto4,producto5,precio1,precio2,precio3,precio4,precio5,codigo1,codigo2,codigo3,codigo4,codigo5,totalProductos);
+     imprimeLinea('*');
+     if(totalProductos==0) cout<<"No hay ningún producto en la carta"<<endl;
+     else{
+          cout<<"Introduzca el código del producto que quiere eliminar"<<endl;
+          cin>>codigoAux;
+          system("cls");
+          if(codigoAux==codigo1) cout<<"Se ha eliminado el producto de la cuenta"<<endl;
+          if(codigoAux==codigo2) cout<<"Se ha eliminado el producto de la cuenta"<<endl;
+          if(codigoAux==codigo3) cout<<"Se ha eliminado el producto de la cuenta"<<endl;
+          if(codigoAux==codigo4) cout<<"Se ha eliminado el producto de la cuenta"<<endl;
+          if(codigoAux==codigo5) cout<<"Se ha eliminado el producto de la cuenta"<<endl;
+          Sleep(2000);
+          system("cls");
+          if(codigoAux==codigo1) cuenta=cuenta-precio1;
+          if(codigoAux==codigo2) cuenta=cuenta-precio2;
+          if(codigoAux==codigo3) cuenta=cuenta-precio3;
+          if(codigoAux==codigo4) cuenta=cuenta-precio4;
+          if(codigoAux==codigo5) cuenta=cuenta-precio5;
+          cout<<"Cuenta: "<<cuenta<<" euros";
+          Sleep(2000);
+          }
+}
+
+void eliminarProductosCamareros(string &producto1,string &producto2,string &producto3,string &producto4,string &producto5,string &codigo1,string &codigo2,string &codigo3,string &codigo4,string &codigo5,string &codigoAux,double &precio1,double &precio2,double &precio3,double &precio4,double &precio5,int totalProductos,double cuenta){
+     system("cls");
+     imprimeLinea('*');
+     mostrarProductos(producto1,producto2,producto3,producto4,producto5,precio1,precio2,precio3,precio4,precio5,codigo1,codigo2,codigo3,codigo4,codigo5,totalProductos);
+     imprimeLinea('*');
+     if(totalProductos==0) cout<<"No hay ningún producto en la carta"<<endl;
+     else{
+          cout<<"Introduzca el código del producto que quiere eliminar"<<endl;
+          cin>>codigoAux;
+          system("cls");
+          if(codigoAux==codigo1) cout<<"Se ha eliminado el producto de la cuenta"<<endl;
+          if(codigoAux==codigo2) cout<<"Se ha eliminado el producto de la cuenta"<<endl;
+          if(codigoAux==codigo3) cout<<"Se ha eliminado el producto de la cuenta"<<endl;
+          if(codigoAux==codigo4) cout<<"Se ha eliminado el producto de la cuenta"<<endl;
+          if(codigoAux==codigo5) cout<<"Se ha eliminado el producto de la cuenta"<<endl;
+          Sleep(2000);
+          system("cls");
+          if(codigoAux==codigo1) cuenta=cuenta-precio1;
+          if(codigoAux==codigo2) cuenta=cuenta-precio2;
+          if(codigoAux==codigo3) cuenta=cuenta-precio3;
+          if(codigoAux==codigo4) cuenta=cuenta-precio4;
+          if(codigoAux==codigo5) cuenta=cuenta-precio5;
+          cout<<"Cuenta: "<<cuenta<<" euros";
+          Sleep(2000);
+          }
+}
+
+void mostrarCuenta(double cuenta){
+     system("cls");
+     cout<<"La cuenta es: "<<cuenta<<" euros";
+     Sleep(2000);
+}
+
+void mostrarVuelta(double pago,double vuelta,double cuenta){
+     system("cls");
+     cout<<"¿Cuánto ha dado el cliente?"<<endl;
+     cin>>pago;
+     system("cls");
+     while(pago<cuenta){
+     cout<<"No es sufiente para pagar";
+     cin>>pago;
+     }
+     vuelta=pago-cuenta;
+     cout<<"La vuelta es: "<<vuelta<<" euros";
+     Sleep(3000);
+     cuenta=0;
+     Sleep(2000);
+}
+
+void reiniciarCuenta(double cuenta){
+     system("cls");
+     cuenta=0;
+     cout<<"La cuenta ha sido reinicida";
+     Sleep(2000);
+}
+
+void cambiarClave(string &clave1,string &clave2,string &clave3,string &claveCamarero,string camareroAux,string camarero1,string camarero2,string camarero3){
+     system("cls");
+     if(camareroAux==camarero1){
+                                   cout<<"Inserte su clave actual"<<endl;
+                                   cin>>claveCamarero;
+                                   system("cls");
+                                   while(claveCamarero!=clave1){
+                                                                cout<<"Clave incorrecta, insertela de nuevo"<<endl;
+                                                                cin>>claveCamarero;
+                                                                system("cls");
+                                                                }
+                                   cout<<"Inserte su nueva clave"<<endl;
+                                   cin>>clave1;
+                                   while (clave1.size()!=3){//la función size devuelve el tamaño de un string
+                                                     cout<<"Clave no válida, inserte una clave de 3 caracteres"<<endl;
+                                                     cin>>clave1;
+                                                     }
+                                   system("cls");
+                                   cout<<"Se ha cambiado la clave con éxito"<<endl;
+                                   }
+     if(camareroAux==camarero2){
+                                   cout<<"Inserte su clave actual"<<endl;
+                                   cin>>claveCamarero;
+                                   system("cls");
+                                   while(claveCamarero!=clave2){
+                                                                cout<<"Clave incorrecta, insertela de nuevo"<<endl;
+                                                                cin>>claveCamarero;
+                                                                system("cls");
+                                                                }
+                                   cout<<"Inserte su nueva clave"<<endl;
+                                   cin>>clave2;
+                                   while (clave2.size()!=3){//la función size devuelve el tamaño de un string
+                                                     cout<<"Clave no válida, inserte una clave de 3 caracteres"<<endl;
+                                                     cin>>clave2;
+                                                     }
+                                   system("cls");
+                                   cout<<"Se ha cambiado la clave con éxito"<<endl;
+                                   }
+     if(camareroAux==camarero3){
+                                   cout<<"Inserte su clave actual"<<endl;
+                                   cin>>claveCamarero;
+                                   system("cls");
+                                   while(claveCamarero!=clave3){
+                                                                cout<<"Clave incorrecta, insertela de nuevo"<<endl;
+                                                                cin>>claveCamarero;
+                                                                system("cls");
+                                                                }
+                                   cout<<"Inserte su nueva clave"<<endl;
+                                   cin>>clave3;
+                                   while (clave3.size()!=3){//la función size devuelve el tamaño de un string
+                                                     cout<<"Clave no válida, inserte una clave de 3 caracteres"<<endl;
+                                                     cin>>clave3;
+                                                     }
+                                   system("cls");
+                                   cout<<"Se ha cambiado la clave con éxito"<<endl;
+                                   }
+                                   Sleep(3000);
+
+}
+
+void compruebaClave(int claveGerente1,int claveGerente2){
+     while(claveGerente1!=claveGerente2){
+     cout<<"La clave no es correcta, insertela de nuevo por favor"<<endl;
+     cin>>claveGerente2;
+     }
+     }
+
+void compruebaClaveCamarero(string clave1,string clave2,string clave3,string claveCamarero,string &camareroAux,string &camarero1,string &camarero2,string &camarero3){
+     while(claveCamarero!=clave1 && claveCamarero!=clave2 && claveCamarero!=clave3){
+     cout<<"La clave no es correcta, insertela de nuevo por favor"<<endl;
+     cin>>claveCamarero;
+     }
+     if(claveCamarero==clave1)camareroAux=camarero1;
+     if(claveCamarero==clave2)camareroAux=camarero2;
+     if(claveCamarero==clave3)camareroAux=camarero3;
+     }
