@@ -1,4 +1,4 @@
-Copyright 2015 Xus72
+Copyright 2015 @Xus72
 
 Este programa gestiona la plantilla y la carta de un bar. Además contiene un menú para los camareros en el que llevan el control
 de la cuenta de las mesas del bar.
